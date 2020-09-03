@@ -1,3 +1,5 @@
+#Esta es mi función para evaluar el porcentaje de la recomendación del dulce en base a la experiencia del usuario
+#Esta entrega hace el avance con la inclusión de funciones ya bien estructuradas
 def rec(calif, dulce):
     return (calif * 100)/10
 
@@ -6,8 +8,9 @@ calif = float(input("¿Qué calificación le das del 1-10? "))
 
 print ("El ", dulce, "es ", rec(calif,dulce),"% recomendado por ti")
 
+#esta función me está sirviendo de caso de prueba para mi programa, la entrega pasada ya la tenía pero ahora la mejoré porque la tenía mal
 def porcentaje(calif):
-    if (10>calif>0):
+    if 10>=calif and calif>=0:
         return True
     else:
         return False
