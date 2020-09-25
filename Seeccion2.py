@@ -13,6 +13,10 @@ r3=input()
 print("¿Qué te gusta más?",accion)
 r4=input()
 
+#Aquí estoy usando mi ciclo while para que funcione solamente cuando el usuario sí quiere hacer la encuesta 
+#A cada resouesta le estoy dando un valor y dependiendo de la sumatoria de puntos que hagan les dirá un dulce
+#El valor máximo de puntos que pueden hacer es 7
+
 def encuesta(r1,r2,r3,r4):
     while (decidir=="si"):
         if (r1 == "feliz" or r1=="sonriente"):
