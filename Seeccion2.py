@@ -3,6 +3,8 @@ color= ["blanco", "negro", "azul","amarillo"]
 paisaje= ["selva","bosque","playa","ciudad"]
 accion= ["leer","escuchar musica","ver la tele","hacer ejercicio"]
 
+#Este también es mi avance 5 porque aquí es como uso las listas en mi proyecto  
+
 decidir= input("¿Quieres saber qué dulce eres? ")
 print("¿Cómo te sientes hoy?",animo)
 r1=input()
