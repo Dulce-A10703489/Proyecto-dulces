@@ -74,6 +74,7 @@ def tamaño_precio(p3,p4):
     
     return (rec2)
 
+#Al momento de imprimir estas dos funciones, es como si le estuviera dando una lista anidada al usuario,ya que muestra dos listas. 
 primera = sabor_textura(p1,p2)
 segunda = tamaño_precio(p3,p4)
 
