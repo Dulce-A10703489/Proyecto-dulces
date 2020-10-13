@@ -248,7 +248,7 @@ def rec(calif, dulce):
 """
 Listas que indican las opciones en 
 la seccion 1
-"""" 
+""" 
 sabor =['dulce','salado','picante']
 textura =['chicloso', 'suave', 'duro']
 tamaño =['chico', 'mediano', 'grande']
@@ -261,7 +261,7 @@ color= ["blanco", "negro", "azul","amarillo"]
 paisaje= ["selva","bosque","playa","ciudad"]
 accion= ["leer","musica","television","deportes"]
 
-#Preguntas de la seccion 1
+#Preguntas de la seccion 1 con sus inputs 
 print("¿Qué prefieres?", sabor)
 p1=input()
 print("¿Qué textura te gusta más?",textura)
@@ -276,8 +276,6 @@ pregunta= [p1,p2,p3,p4]
 listas=dulce(pregunta),salado(pregunta),picante(pregunta),chico(pregunta),mediano(pregunta),grande(pregunta)
 
 print("Puedes comprar: ",listas)
-
-
 
 #Preguntas de la seccion 2
 print ("¿Cómo te sientes hoy?",animo)
@@ -295,10 +293,7 @@ total= cuarta(resp)
 print("Tuviste un total de:",total, "puntos y eso quiere decir que...")
 print (regresa(total))
 
-
 #Preguntas de la seccion 3
 dulce= str(input("Nombre del dulce que calificas "))
 calif = float(input("¿Qué calificación le das del 1-10? "))
 print ("El ", dulce, "es ", rec(calif,dulce),"% recomendado por ti")
-
-
