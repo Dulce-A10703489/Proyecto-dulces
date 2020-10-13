@@ -1,4 +1,5 @@
 """
+Proyecto dulces
 El programa tiene 3 secciones, en la primera puedes hacer un test que te recomienda un dulce,
 la segunda te dice qué dulce eres y la tercera muestra un porcentaje de recomendación 
 de cada dulce que el usuario guarda
@@ -6,6 +7,12 @@ de cada dulce que el usuario guarda
 
 #Seccion 1 preguntas 
 def dulce(pregunta):
+    """
+    (funciones, listas, ciclos, condicionales)
+    Cuando el usuario decide un sabor dulce,
+    se le recomiendan ciertos dulces de acuerdo 
+    a la textura que prefiere
+    """
     i=0
     while (pregunta[i]==sabor[i]):
         if (p2==textura[i]):
@@ -19,6 +26,12 @@ def dulce(pregunta):
         return regresa
 
 def salado (pregunta):
+    """
+    (funciones, listas, ciclos, condicionales)
+    Cuando el usuario decide un sabor salado,
+    se le recomiendan ciertos dulces de acuerdo 
+    a la textura que prefiere
+    """
     i=0
     while (pregunta[i]==sabor[1]):
         if (p2==textura[i]):
@@ -32,6 +45,12 @@ def salado (pregunta):
         return regresa
 
 def picante(pregunta):
+    """
+    (funciones, listas, ciclos, condicionales)
+    Cuando el usuario decide un sabor picante,
+    se le recomiendan ciertos dulces de acuerdo 
+    a la textura que prefiere
+    """
     i=0
     while (pregunta[i]==sabor[2]):
         if (p2==textura[i]):
@@ -45,6 +64,12 @@ def picante(pregunta):
         return regresa
     
 def chico (pregunta):
+    """
+    (funciones, listas, ciclos, condicionales)
+    Cuando el usuario decide de tamaño chico,
+    se le recomiendan ciertos dulces de acuerdo 
+    al precio que gusta pagar
+    """
     i=2
     while (pregunta[i]=="chico"):
         if (p4 <= 0):
@@ -58,6 +83,12 @@ def chico (pregunta):
         return regresa
     
 def mediano (pregunta):
+     """
+    (funciones, listas, ciclos, condicionales)
+    Cuando el usuario decide de tamaño mediano,
+    se le recomiendan ciertos dulces de acuerdo 
+    al precio que gusta pagar
+    """
     i=2
     while (pregunta[i]=="mediano"):
         if (p4 <= 0):
@@ -71,6 +102,12 @@ def mediano (pregunta):
         return regresa
 
 def grande (pregunta):
+     """
+    (funciones, listas, ciclos, condicionales)
+    Cuando el usuario decide de tamaño grande,
+    se le recomiendan ciertos dulces de acuerdo 
+    al precio que gusta pagar
+    """
     i=2
     while (pregunta[i]=="grande"):
         if (p4 <= 0):
@@ -85,6 +122,12 @@ def grande (pregunta):
 
 #Seccion 2 preguntas
 def primera(resp):
+     """
+    (funciones, listas, ciclos, condicionales,operadores)
+    Cuando la respuesta del usuario, que se va guardando en "resp",
+    es igual a una de las opciones de la lista animo, se le otorga
+    cierto valor que se guarda en el acumulador "acum"
+    """
     acum=0
     i=0
     for resp in animo[i]:
@@ -158,23 +201,39 @@ def regresa(total):
 
 #Seccion 3 preguntas 
 def rec(calif, dulce):
+    """
+    (Uso de operadores, uso de funcioes)
+    El usuario define el dulce que califica
+    y la calificacion que le otorga, esto 
+    devuelve el porcentaje de recomendacion
+    de su parte 
+    """
     while (calif>0):
         if (calif>=1 and calif<=10):
+            
             calif=calif*100/10
             return calif
         else:
             return "Error"
 
-#Listas usadas para las opciones a las preguntas  
+#Listas usadas para las opciones a las preguntas 
+"""
+Listas que indican las opciones en 
+la seccion 1
+"""" 
 sabor =['dulce','salado','picante']
 textura =['chicloso', 'suave', 'duro']
 tamaño =['chico', 'mediano', 'grande']
+"""
+Listas que funcionan como opciones
+de la seccion 2
+"""
 animo=["feliz","triste","enojado","sonriente"]
 color= ["blanco", "negro", "azul","amarillo"]
 paisaje= ["selva","bosque","playa","ciudad"]
 accion= ["leer","musica","television","deportes"]
 
-#Seccion 1 preguntas
+#Preguntas de la seccion 1
 print("¿Qué prefieres?", sabor)
 p1=input()
 print("¿Qué textura te gusta más?",textura)
@@ -192,7 +251,7 @@ print("Puedes comprar: ",listas)
 
 
 
-#Seccion 2 preguntas
+#Preguntas de la seccion 2
 print ("¿Cómo te sientes hoy?",animo)
 r1=input()
 print("¿Qué color prefieres?",color)
@@ -209,7 +268,7 @@ print("Tuviste un total de:",total, "puntos y eso quiere decir que...")
 print (regresa(total))
 
 
-#Seccion 3 preguntas
+#Preguntas de la seccion 3
 dulce= str(input("Nombre del dulce que calificas "))
 calif = float(input("¿Qué calificación le das del 1-10? "))
 print ("El ", dulce, "es ", rec(calif,dulce),"% recomendado por ti")
