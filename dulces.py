@@ -1,5 +1,5 @@
 """
-Proyecto dulces
+PROYECTO DULCES
 El programa tiene 3 secciones, en la primera puedes hacer un test que te recomienda un dulce,
 la segunda te dice qué dulce eres y la tercera muestra un porcentaje de recomendación 
 de cada dulce que el usuario guarda
