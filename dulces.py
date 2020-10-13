@@ -83,7 +83,7 @@ def chico (pregunta):
         return regresa
     
 def mediano (pregunta):
-     """
+    """
     (funciones, listas, ciclos, condicionales)
     Cuando el usuario decide de tamaño mediano,
     se le recomiendan ciertos dulces de acuerdo 
@@ -102,7 +102,7 @@ def mediano (pregunta):
         return regresa
 
 def grande (pregunta):
-     """
+    """
     (funciones, listas, ciclos, condicionales)
     Cuando el usuario decide de tamaño grande,
     se le recomiendan ciertos dulces de acuerdo 
@@ -122,11 +122,12 @@ def grande (pregunta):
 
 #Seccion 2 preguntas
 def primera(resp):
-     """
-    (funciones, listas, ciclos, condicionales,operadores)
+    """
+    (funciones, listas, ciclos, condicionales, operadores)
     Cuando la respuesta del usuario, que se va guardando en "resp",
     es igual a una de las opciones de la lista animo, se le otorga
-    cierto valor que se guarda en el acumulador "acum"
+    cierto valor que se guarda en el acumulador "acum" que en este 
+    momento inicia en cero 
     """
     acum=0
     i=0
@@ -142,6 +143,13 @@ def primera(resp):
         return acum
     
 def segunda(resp):
+    """
+    (funciones, listas, ciclos, condicionales, operadores)
+    Cuando la respuesta del usuario, que se va guardando en "resp",
+    es igual a una de las opciones de la lista color, se le otorga
+    cierto valor que se guarda en el acumulador "acum" que en este 
+    caso inicia con el valor de la función anterior 
+    """
     acum=primera(resp)
     i=0
     for resp in color[i]:
@@ -156,6 +164,13 @@ def segunda(resp):
         return acum
 
 def tercera(resp):
+    """
+    (funciones, listas, ciclos, condicionales, operadores)
+    Cuando la respuesta del usuario, que se va guardando en "resp",
+    es igual a una de las opciones de la lista paisaje, se le otorga
+    cierto valor que se guarda en el acumulador "acum", en este 
+    momento inicia con el valor de la función anterior 
+    """
     acum=segunda(resp)
     i=0
     for reso in paisaje[i]:
@@ -170,6 +185,13 @@ def tercera(resp):
         return acum
 
 def cuarta(resp):
+    """
+    (funciones, listas, ciclos, condicionales, operadores)
+    Cuando la respuesta del usuario, que se va guardando en "resp",
+    es igual a una de las opciones de la lista paisaje, se le otorga
+    cierto valor que se guarda en el acumulador "acum", igualmente, 
+    en este momento inicia con el valor de la función anterior 
+    """
     acum=tercera(resp)
     i=0
     for resp in accion[i]:
@@ -184,6 +206,12 @@ def cuarta(resp):
         return acum
 
 def regresa(total):
+    """
+    (condicionales, funciones)
+    Esta funcion ayuda a designar el dulce 
+    dependiendo del total que se obtuvo
+    al contestar las preguntas anteriores
+    """
     if (total >= 2 and total< 3):
         return "¡Eres una Rockaleta!"
     elif (total >= 3 and total< 4):
