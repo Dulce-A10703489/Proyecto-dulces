@@ -233,7 +233,7 @@ def regresa(total):
 #Seccion 3 preguntas 
 def rec(calif, dulce):
     """
-    (Uso de operadores, uso de funcioes)
+    (operadores, funciones, ciclos)
     El usuario define el dulce que califica
     y la calificacion que le otorga, esto 
     devuelve el porcentaje de recomendacion
