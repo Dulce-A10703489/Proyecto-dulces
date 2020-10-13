@@ -5,6 +5,9 @@ la segunda te dice qué dulce eres y la tercera muestra un porcentaje de recomen
 de cada dulce que el usuario guarda
 """
 
+"""
+========================= funciones de preguntas ===========================================
+"""
 #Seccion 1 preguntas 
 def dulce(pregunta):
     """
@@ -243,6 +246,9 @@ def rec(calif, dulce):
             return calif
         else:
             return "Error"
+"""
+================= parte principal del programa ============================
+"""
 
 #Listas usadas para las opciones a las preguntas 
 """
@@ -261,7 +267,7 @@ color= ["blanco", "negro", "azul","amarillo"]
 paisaje= ["selva","bosque","playa","ciudad"]
 accion= ["leer","musica","television","deportes"]
 
-#Preguntas de la seccion 1 con sus inputs 
+#Preguntas de la seccion 1 y respuestas del usuario 
 print("¿Qué prefieres?", sabor)
 p1=input()
 print("¿Qué textura te gusta más?",textura)
@@ -277,7 +283,7 @@ listas=dulce(pregunta),salado(pregunta),picante(pregunta),chico(pregunta),median
 
 print("Puedes comprar: ",listas)
 
-#Preguntas de la seccion 2
+#Preguntas de la seccion 2 y las respuestas del usuario
 print ("¿Cómo te sientes hoy?",animo)
 r1=input()
 print("¿Qué color prefieres?",color)
@@ -293,7 +299,7 @@ total= cuarta(resp)
 print("Tuviste un total de:",total, "puntos y eso quiere decir que...")
 print (regresa(total))
 
-#Preguntas de la seccion 3
+#Preguntas de la seccion 3 y respuestas del usuario 
 dulce= str(input("Nombre del dulce que calificas "))
 calif = float(input("¿Qué calificación le das del 1-10? "))
 print ("El ", dulce, "es ", rec(calif,dulce),"% recomendado por ti")
