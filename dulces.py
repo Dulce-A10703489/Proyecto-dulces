@@ -122,7 +122,25 @@ def grande (pregunta):
         else:
             regresa=["dulces Haribo","dulces pringles","dulces kinder"]
         return regresa
-
+    
+def imprime_1 (sabores):
+    i=0
+    for arg in sabores:
+        if arg == False:
+            print (" ")
+        else:
+            return arg
+        i=i+1
+        
+def imprime_2 (tamaños):
+    i=0
+    for arg in tamaños:
+        if arg == False:
+            print (" ")
+        else:
+            return arg
+        i=i+1
+        
 #Seccion 2 preguntas
 def primera(resp):
     """
@@ -278,10 +296,9 @@ print("¿Cuántos pesos quieres gastar? ")
 p4 = float (input())
 
 pregunta= [p1,p2,p3,p4]
-
-listas=dulce(pregunta),salado(pregunta),picante(pregunta),chico(pregunta),mediano(pregunta),grande(pregunta)
-
-print("Puedes comprar: ",listas)
+sabores=dulce(pregunta),salado(pregunta),picante(pregunta)
+tamaños=chico(pregunta),mediano(pregunta),grande(pregunta)
+print("Puedes comprar: ",imprime_1(sabores),imprime_2(tamaños))
 
 #Preguntas de la seccion 2 y las respuestas del usuario
 print ("¿Cómo te sientes hoy?",animo)
