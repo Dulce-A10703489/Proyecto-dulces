@@ -17,6 +17,8 @@ def dulce(pregunta):
     a la textura que prefiere
     """
     i=0
+    if (pregunta[i]!=sabor[i]):
+        return False
     while (pregunta[i]==sabor[i]):
         if (p2==textura[i]):
             regresa=["gomitas","chicles","sugus"]
@@ -36,6 +38,8 @@ def salado (pregunta):
     a la textura que prefiere
     """
     i=0
+    if (pregunta[i]!=sabor[1]):
+        return False
     while (pregunta[i]==sabor[1]):
         if (p2==textura[i]):
             regresa=["chicles de menta","aciditos","mentos"]
@@ -55,6 +59,8 @@ def picante(pregunta):
     a la textura que prefiere
     """
     i=0
+    if (pregunta[i]!=sabor[2]):
+        return False
     while (pregunta[i]==sabor[2]):
         if (p2==textura[i]):
             regresa=["skwinkles","pulparindo","picafresa"]
@@ -74,6 +80,8 @@ def chico (pregunta):
     al precio que gusta pagar
     """
     i=2
+    if (pregunta[i] != "chico"):
+        return False 
     while (pregunta[i]=="chico"):
         if (p4 <= 0):
             return "Error, el número debe ser mayor que cero"
@@ -93,6 +101,8 @@ def mediano (pregunta):
     al precio que gusta pagar
     """
     i=2
+    if (pregunta[i] != "mediano"):
+        return False 
     while (pregunta[i]=="mediano"):
         if (p4 <= 0):
             return "Error, el número debe ser mayor que cero"
@@ -112,6 +122,8 @@ def grande (pregunta):
     al precio que gusta pagar
     """
     i=2
+    if (pregunta[i] != "grande"):
+        return False 
     while (pregunta[i]=="grande"):
         if (p4 <= 0):
             return "Error, el número debe ser mayor que cero"
@@ -140,7 +152,7 @@ def imprime_2 (tamaños):
         else:
             return arg
         i=i+1
-        
+
 #Seccion 2 preguntas
 def primera(resp):
     """
@@ -249,9 +261,9 @@ def regresa(total):
         return "Error =("
 
 #Seccion 3 preguntas 
-def rec(calif, dulce):
+def recomienda(calif, dulce):
     """
-    (operadores, funciones, ciclos)
+    (Uso de operadores, uso de funcioes)
     El usuario define el dulce que califica
     y la calificacion que le otorga, esto 
     devuelve el porcentaje de recomendacion
@@ -285,6 +297,7 @@ color= ["blanco", "negro", "azul","amarillo"]
 paisaje= ["selva","bosque","playa","ciudad"]
 accion= ["leer","musica","television","deportes"]
 
+
 #Preguntas de la seccion 1 y respuestas del usuario 
 print("¿Qué prefieres?", sabor)
 p1=input()
@@ -298,6 +311,7 @@ p4 = float (input())
 pregunta= [p1,p2,p3,p4]
 sabores=dulce(pregunta),salado(pregunta),picante(pregunta)
 tamaños=chico(pregunta),mediano(pregunta),grande(pregunta)
+
 print("Puedes comprar: ",imprime_1(sabores),imprime_2(tamaños))
 
 #Preguntas de la seccion 2 y las respuestas del usuario
@@ -319,4 +333,4 @@ print (regresa(total))
 #Preguntas de la seccion 3 y respuestas del usuario 
 dulce= str(input("Nombre del dulce que calificas "))
 calif = float(input("¿Qué calificación le das del 1-10? "))
-print ("El ", dulce, "es ", rec(calif,dulce),"% recomendado por ti")
+print ("El ", dulce, "es ", recomienda(calif,dulce),"% recomendado por ti")
