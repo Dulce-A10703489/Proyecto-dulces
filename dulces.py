@@ -107,11 +107,11 @@ def mediano (pregunta):
         if (p4 <= 0):
             return "Error, el número debe ser mayor que cero"
         elif(p4 >= 1 and p4 <= 5):
-            regresa=["dulces de la rosa","dulces vero"]
+            regresa=["marcas:","de la rosa","vero"]
         elif(p4 >= 6 and p4 <= 10):
-            regresa=["dulces chupa chups","dulces ricolino"]
+            regresa=["marcas:","chupa chups","ricolino"]
         else:
-            regresa=["dulces wonka", "dulces lucky gummy\'s", "dulces lucas"]
+            regresa=["marcas:", "wonka", "lucky gummy\'s", "lucas"]
         return regresa
 
 def grande (pregunta):
@@ -128,11 +128,11 @@ def grande (pregunta):
         if (p4 <= 0):
             return "Error, el número debe ser mayor que cero"
         elif (p4 >= 1 and p4 <= 5):
-            regresa=["dulces duvalin","dulces tutsi"]
+            regresa=["marcas:","duvalin","tutsi"]
         elif(p4 >= 6 and p4 <= 10):
-            regresa=["dulces twix","dulces barcel","dulces marinela"]
+            regresa=["marcas:", "twix","barcel","marinela"]
         else:
-            regresa=["dulces Haribo","dulces pringles","dulces kinder"]
+            regresa=["marcas:","Haribo","pringles","kinder"]
         return regresa
     
 def imprime_1 (sabores):
@@ -297,24 +297,23 @@ color= ["blanco", "negro", "azul","amarillo"]
 paisaje= ["selva","bosque","playa","ciudad"]
 accion= ["leer","musica","television","deportes"]
 
-
 #Preguntas de la seccion 1 y respuestas del usuario 
+print("¡Hola! En esta sección te ayudo a elegir un dulce de acuerdo a tus antojos", " \n")
 print("¿Qué prefieres?", sabor)
 p1=input()
 print("¿Qué textura te gusta más?",textura)
 p2= input()
 print("De qué tamaño prefieres tu dulce?",tamaño)
 p3=input()
-print("¿Cuántos pesos quieres gastar? ")
+print("¿Cuántos pesos quieres gastar?")
 p4 = float (input())
-
 pregunta= [p1,p2,p3,p4]
 sabores=dulce(pregunta),salado(pregunta),picante(pregunta)
 tamaños=chico(pregunta),mediano(pregunta),grande(pregunta)
-
-print("Puedes comprar: ",imprime_1(sabores),imprime_2(tamaños))
+print("Puedes comprar: ",imprime_1(sabores),imprime_2(tamaños),"\n")
 
 #Preguntas de la seccion 2 y las respuestas del usuario
+print("Bienvenido a la sección 2, aquí te decimos ¡qué dulce eres!", " \n")
 print ("¿Cómo te sientes hoy?",animo)
 r1=input()
 print("¿Qué color prefieres?",color)
@@ -328,9 +327,10 @@ resp=[r1,r2,r3,r4]
 total= cuarta(resp)
 
 print("Tuviste un total de:",total, "puntos y eso quiere decir que...")
-print (regresa(total))
+print (regresa(total), " \n")
 
-#Preguntas de la seccion 3 y respuestas del usuario 
+#Preguntas de la seccion 3 y respuestas del usuario
+print("Finalmente, califica un dulce", " \n")
 dulce= str(input("Nombre del dulce que calificas "))
 calif = float(input("¿Qué calificación le das del 1-10? "))
 print ("El ", dulce, "es ", recomienda(calif,dulce),"% recomendado por ti")
