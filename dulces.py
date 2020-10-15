@@ -136,6 +136,13 @@ def grande (pregunta):
         return regresa
     
 def imprime_1 (sabores):
+    """
+    (funciones,condicionales,ciclos,listas)
+    Lo que esta funcion hace es recorrer la lista sabores
+    y determinar, para cada uno de sus argumentos, si son
+    falsos o no. En caso de no serlos deja el argumento 
+    como es y en caso de serlo lo sustituye por "False"
+    """
     i=0
     for arg in sabores:
         if arg == False:
@@ -145,6 +152,13 @@ def imprime_1 (sabores):
         i=i+1
         
 def imprime_2 (tamaños):
+    """
+    (funciones,condicionales,ciclos,listas)
+    Lo que esta funcion hace es recorrer la lista tamaños
+    y determinar, para cada uno de sus argumentos, si son
+    falsos o no. En caso de no serlos deja el argumento 
+    como es y en caso de serlo lo sustituye por "False"
+    """
     i=0
     for arg in tamaños:
         if arg == False:
