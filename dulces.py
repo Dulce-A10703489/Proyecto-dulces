@@ -146,7 +146,7 @@ def imprime_1 (sabores):
     i=0
     for arg in sabores:
         if arg == False:
-            print (" ")
+            print("")
         else:
             return arg
         i=i+1
@@ -162,7 +162,7 @@ def imprime_2 (tamaños):
     i=0
     for arg in tamaños:
         if arg == False:
-            print (" ")
+            print("")
         else:
             return arg
         i=i+1
