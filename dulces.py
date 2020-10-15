@@ -307,9 +307,11 @@ print("De qué tamaño prefieres tu dulce?",tamaño)
 p3=input()
 print("¿Cuántos pesos quieres gastar?")
 p4 = float (input())
+
 pregunta= [p1,p2,p3,p4]
 sabores=dulce(pregunta),salado(pregunta),picante(pregunta)
 tamaños=chico(pregunta),mediano(pregunta),grande(pregunta)
+
 print("Puedes comprar: ",imprime_1(sabores),imprime_2(tamaños),"\n")
 
 #Preguntas de la seccion 2 y las respuestas del usuario
