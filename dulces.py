@@ -6,6 +6,11 @@ de cada dulce que el usuario guarda
 """
 #Biblioteca
 from colorama import Fore, Back, Style
+"""
+Colorama ayuda a dar un dieño al programa,
+lo que hace es cambiar el color del fondo o
+de las letras, así como su grosor
+"""
 
 """
 ========================= funciones de preguntas ===========================================
