@@ -4,6 +4,8 @@ El programa tiene 3 secciones, en la primera puedes hacer un test que te recomie
 la segunda te dice qué dulce eres y la tercera muestra un porcentaje de recomendación 
 de cada dulce que el usuario guarda
 """
+#Biblioteca
+from colorama import Fore, Back, Style
 
 """
 ========================= funciones de preguntas ===========================================
@@ -312,41 +314,41 @@ paisaje= ["selva","bosque","playa","ciudad"]
 accion= ["leer","musica","television","deportes"]
 
 #Preguntas de la seccion 1 y respuestas del usuario 
-print("¡Hola! En esta sección te ayudo a elegir un dulce de acuerdo a tus antojos", " \n")
-print("¿Qué prefieres?", sabor)
+print(Back.CYAN + Fore.YELLOW + Style.BRIGHT +"¡Hola! En esta sección te ayudo a elegir un dulce de acuerdo a tus antojos", " \n")
+print(Style.RESET_ALL+ Fore.MAGENTA + "¿Qué prefieres?", sabor)
 p1=input()
-print("¿Qué textura te gusta más?",textura)
+print(Fore.GREEN+ "¿Qué textura te gusta más?",textura)
 p2= input()
-print("De qué tamaño prefieres tu dulce?",tamaño)
+print(Fore.BLUE +"De qué tamaño prefieres tu dulce?",tamaño)
 p3=input()
-print("¿Cuántos pesos quieres gastar?")
+print(Fore.CYAN+"¿Cuántos pesos quieres gastar?")
 p4 = float (input())
 
 pregunta= [p1,p2,p3,p4]
 sabores=dulce(pregunta),salado(pregunta),picante(pregunta)
 tamaños=chico(pregunta),mediano(pregunta),grande(pregunta)
 
-print("Puedes comprar: ",imprime_1(sabores),imprime_2(tamaños),"\n")
+print(Fore.YELLOW+ Back.CYAN+ Style.BRIGHT+"Puedes comprar: ",imprime_1(sabores),imprime_2(tamaños),"\n")
 
 #Preguntas de la seccion 2 y las respuestas del usuario
-print("Bienvenido a la sección 2, aquí te decimos ¡qué dulce eres!", " \n")
-print ("¿Cómo te sientes hoy?",animo)
+print(Back.MAGENTA+ Fore.WHITE + Style.BRIGHT +"Bienvenido a la sección 2, aquí te decimos ¡qué dulce eres!", " \n")
+print (Style.RESET_ALL+Fore.BLUE + "¿Cómo te sientes hoy?",animo)
 r1=input()
-print("¿Qué color prefieres?",color)
+print(Fore.RED +"¿Qué color prefieres?",color)
 r2=input()
-print("¿Qué lugar prefieres?",paisaje)
+print(Fore.GREEN +"¿Qué lugar prefieres?",paisaje)
 r3=input()
-print("¿Qué prefieres?",accion)
+print(Fore.CYAN +"¿Qué prefieres?",accion)
 r4=input()
 
 resp=[r1,r2,r3,r4]
 total= cuarta(resp)
 
-print("Tuviste un total de:",total, "puntos y eso quiere decir que...")
+print(Fore.WHITE+ Back.MAGENTA+ Style.BRIGHT+"Tuviste un total de:",total, "puntos y eso quiere decir que...")
 print (regresa(total), " \n")
 
 #Preguntas de la seccion 3 y respuestas del usuario
-print("Finalmente, califica un dulce", " \n")
-dulce= str(input("Nombre del dulce que calificas "))
-calif = float(input("¿Qué calificación le das del 1-10? "))
-print ("El ", dulce, "es ", recomienda(calif,dulce),"% recomendado por ti")
+print(Back.GREEN + Fore.WHITE + Style.BRIGHT +"Finalmente, califica un dulce", " \n")
+dulce=str(input(Style.RESET_ALL + Fore.RED + "Nombre del dulce que calificas "))
+calif =float(input(Fore.CYAN +"¿Qué calificación le das del 1-10? "))
+print (Back.GREEN + Fore.WHITE + Style.BRIGHT +"El dulce:", dulce, "es ", recomienda(calif,dulce),"% recomendado por ti")
