@@ -1,0 +1,101 @@
+=================== Corrección 1 =====================
+Sub competencia: 
+	Aplica funciones de manera adecuada para segmentar el código y mantener reusabilidad y modularidad
+
+Error original: Tenía únicamente una función que usaba sólo if’s que se repetían y la hacían muy larga, además
+de que recibía mucho parámetros.  
+
+Cambio realizado: Separé la función en 4 funciones independientes y cada una recibe un parámetro. 
+				
+			def primera(resp)
+
+			def segunda(resp)
+
+			def tercera(resp)
+
+			def cuarta(resp)
+
+Líneas de código donde se ve la corrección: 178 a 260
+
+
+=================== Corrección 2 =====================
+Sub-competencia: 
+	Aplica correctamente ciclos while 
+
+Error original:  Al principio, tenía un ciclo while que no funcionaba y además no servía de nada que estuviera en el programa (Avance 5)
+
+			def encuesta(r1,r2,r3,r4,decidir):
+  				while (decidir=="si"): 
+        			if (r1 == "feliz" or r1=="sonriente"):
+            			val1=1
+        			elif (r1== "triste"):
+            			val1=0.5
+        			else:
+            			val1=0.25
+
+Cambio realizado: Cambié el ciclo while por un ciclo for que me recorra la lista de manera más eficaz. 
+
+			def primera(resp):
+    			acum=0
+    			i=0
+    			for resp in animo[i]:
+        			if (r1==animo[i] or r1==animo[1]):
+            			acum=1
+        			i=i+2
+        			if(r1==animo[i]):
+            			acum= 0.5
+        			i=i+1
+        			if (r1==animo[i]):
+            			acum=0.25
+        			return acum
+
+Líneas de código donde se ve la corrección: 178 a 197
+
+=================== Corrección 3 =====================
+Sub competencia: 
+	Aplica funciones de manera adecuada para segmentar el código y mantener reusabilidad y modularidad
+	
+Error original: Guardaba las variables de mi primera sección en una lista llamada “listas”, pero a la hora de correr el programa,
+aparecía “None” en el print de las funciones que no corría. 
+
+			listas=dulce(pregunta),salado(pregunta),picante(pregunta),chico(pregunta),mediano(pregunta),grande(pregunta)
+
+			print("Puedes comprar: ",listas)
+
+Cambio realizado: Escribí dos funciones nuevas que ayudan a imprimir únicamente las funciones que
+sí corren, igualmente, agregué dos listas que contienen el resultado de todas las funciones de la sección 1
+
+Funciones:
+		def imprime_1(sabores)
+		def imprime_2(tamaños)
+Listas:
+		sabores=dulce(pregunta),salado(pregunta),picante(pregunta)
+		tamaños=chico(pregunta),mediano(pregunta),grande(pregunta)
+
+Líneas de código donde se ve la corrección: 145 a 175 y 333 a 334
+
+=================== Corrección 4 =====================
+Sub competencia:
+	Usa una biblioteca de python extra (a las vistas en el temario) que investiga por su cuenta (avance 1)
+
+Error original: No hacía uso de ninguna biblioteca
+
+Cambio realizado: Importé la biblioteca de “colorama”
+
+		from colorama import Fore, Back, Style
+
+Líneas de código donde se ve la corrección: 8
+
+=================== Corrección 5 =====================
+Sub competencia:
+	Explica como funciona la biblioteca extra (avance 1)
+
+Error original: Como no tenía biblioteca, tampoco tenía esta competencia
+
+Cambio realizado: Importé la biblioteca y describí su función 
+		"""
+		Colorama ayuda a dar un dieño al programa,
+		lo que hace es cambiar el color del fondo o
+		de las letras, así como su grosor
+		"""
+Líneas de código donde se ve la corrección: 9 a 13
