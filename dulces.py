@@ -282,7 +282,7 @@ def regresa(total):
         return "Error =("
 
 #Seccion 3 preguntas 
-def recomienda(calif, dulce):
+def recomienda(calif):
     """
     (Uso de operadores, uso de funcioes)
     El usuario define el dulce que califica
@@ -356,4 +356,4 @@ print (regresa(total), " \n")
 print(Back.GREEN + Fore.WHITE + Style.BRIGHT +"Finalmente, califica un dulce", " \n")
 dulce=str(input(Style.RESET_ALL + Fore.RED + "Nombre del dulce que calificas "))
 calif =float(input(Fore.CYAN +"¿Qué calificación le das del 1-10? "))
-print (Back.GREEN + Fore.WHITE + Style.BRIGHT +"El dulce:", dulce, "es ", recomienda(calif,dulce),"% recomendado por ti")
+print (Back.GREEN + Fore.WHITE + Style.BRIGHT +"El dulce:", dulce, "es ", recomienda(calif),"% recomendado por ti")
