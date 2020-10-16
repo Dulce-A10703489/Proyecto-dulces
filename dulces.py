@@ -354,6 +354,12 @@ print (regresa(total), " \n")
 
 #Preguntas de la seccion 3 y respuestas del usuario
 print(Back.GREEN + Fore.WHITE + Style.BRIGHT +"Finalmente, califica un dulce", " \n")
-dulce=str(input(Style.RESET_ALL + Fore.RED + "Nombre del dulce que calificas "))
-calif =float(input(Fore.CYAN +"¿Qué calificación le das del 1-10? "))
+dulce=str(input(Style.RESET_ALL + Fore.RED + "Nombre del dulce que calificas " + "\n"))
+calif =float(input(Fore.CYAN +"¿Qué calificación le das del 1-10? "+"\n"))
 print (Back.GREEN + Fore.WHITE + Style.BRIGHT +"El dulce:", dulce, "es ", recomienda(calif),"% recomendado por ti")
+
+num= str(calif)
+file1 = open("historial.txt","a")
+file1.write(dulce)
+file1.write(num)    
+file1.close() 
